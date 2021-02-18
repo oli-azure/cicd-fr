@@ -20,3 +20,14 @@ steps:
   displayName: 'Dotnet Test'
   inputs:
     command: 'test'
+
+- task: DotNetCoreCLI@2
+  displayName: 'Dotnet Publish'
+  inputs:
+    command: 'publish'
+    publishWebProjects: true
+    arguments: '--output $(Build.ArtifactStagingDirectory)'
+    zipAfterPublish: True
+
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish Artifacts'
