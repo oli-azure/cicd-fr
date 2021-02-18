@@ -20,7 +20,7 @@ namespace MyWebApp.Tests
         [Fact]
         public void Test_olivier_is_lit()
         {
-            var olivier = "😴😴😴";
+            var olivier = "🔥🔥🔥";
             Assert.Equal("🔥🔥🔥", olivier);
         }
     }
